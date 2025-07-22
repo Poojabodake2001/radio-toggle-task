@@ -3,18 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
+import { HttpClientModule} from '@angular/common/http';
+import { UserDataComponent } from './user-data/user-data.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminService } from './shared/service/admin.service';
+import { UserFormComponent } from './user-form/user-form.component';
+import { BindingComponent } from './binding/binding.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminComponent,
+    UserDataComponent,
+    UserFormComponent,
+    BindingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

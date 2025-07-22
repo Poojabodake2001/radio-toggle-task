@@ -1,0 +1,33 @@
+<div class="container">
+    <h4 class="badge-secondary text-center">User Data</h4>
+    <table class="table table-bordered table-responsive-sm " >
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>DOB</th>
+                <th>Contact NO</th>
+                <th>State</th>
+                <th>City</th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users let i = index">
+                <td>{{i+1}}</td>
+                <td>{{user.FName}}</td>
+                <td>{{user.LName}}</td>
+                <td>{{user.DOB}}</td>
+                <td>{{user.Contact}}</td>
+                <td>{{user.State}}</td>
+                <td>{{user.City}}</td>
+            </tr>
+    
+        </tbody>
+        
+    </table>
+    <button class="btn btn-warning  btn-sm ml-3" (click)="editbtn(users)">Edit</button>
+    <button class="btn btn-warning  btn-sm ml-3" (click)="deletebtn(users)">Delete</button>
+
+</div>
